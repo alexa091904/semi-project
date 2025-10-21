@@ -1,0 +1,217 @@
+/**
+ * Login Page Styles
+ * Edusync Management System
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-header {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.login-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+.login-header .logo img {
+  height: 30px;
+  width: auto;
+}
+.login-header .logo .logo-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+}
+.login-header .header-login-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-header .header-login-btn:hover {
+  background-color: #0056b3;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.login-container .login-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .login-container .login-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.login-container .welcome-section {
+  flex: 1;
+}
+.login-container .welcome-section h1 {
+  font-size: 32px;
+  color: #333333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.login-container .welcome-section p {
+  font-size: 16px;
+  color: #666666;
+}
+.login-container .login-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.login-container .login-box h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333333;
+  text-align: center;
+  font-weight: 600;
+}
+.login-container .login-box .form-group {
+  margin-bottom: 20px;
+}
+.login-container .login-box .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+}
+.login-container .login-box .form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background-color: #f8f9fa;
+}
+.login-container .login-box .form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #ffffff;
+}
+.login-container .login-box .form-group input::-moz-placeholder {
+  color: #aaa;
+}
+.login-container .login-box .form-group input::placeholder {
+  color: #aaa;
+}
+.login-container .login-box .error-message {
+  display: none;
+  background-color: #f8d7da;
+  color: #dc3545;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #f5c6cb;
+}
+.login-container .login-box .login-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+.login-container .login-box .login-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+.login-container .login-box .login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.login-container .login-box .forgot-password {
+  text-align: center;
+  margin-top: 15px;
+}
+.login-container .login-box .forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.login-container .login-box .forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.login-footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  color: #666666;
+  font-size: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+.login-footer p {
+  margin: 5px 0;
+}
+.login-footer .footer-logo {
+  color: #007bff;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login-box {
+  animation: fadeIn 0.5s ease;
+}

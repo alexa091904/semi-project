@@ -1,0 +1,170 @@
+/**
+ * Dashboard Styles
+ * Edusync Management System - Matching Image Design
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 160px;
+  background-color: #f5f5f5;
+  color: #2c3e50;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 3px solid #3498db;
+  z-index: 1000;
+}
+.sidebar .sidebar-header {
+  padding: 20px 15px;
+  border-bottom: 1px solid #ddd;
+}
+.sidebar .sidebar-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+.sidebar .sidebar-header .logo .logo-icon {
+  font-size: 24px;
+}
+.sidebar .sidebar-header .logo .logo-text {
+  color: #3498db;
+}
+.sidebar .sidebar-nav {
+  padding: 10px 0;
+}
+.sidebar .sidebar-nav ul {
+  list-style: none;
+}
+.sidebar .sidebar-nav ul li {
+  margin-bottom: 0;
+}
+.sidebar .sidebar-nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  font-weight: 600;
+  border-left: 3px solid transparent;
+}
+.sidebar .sidebar-nav ul li a:hover {
+  background-color: #e8e8e8;
+}
+.sidebar .sidebar-nav ul li.active a {
+  background-color: #ffffff;
+  border-left: 3px solid #3498db;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 160px;
+  background-color: #ecf0f1;
+}
+
+.top-bar {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ddd;
+}
+.top-bar .page-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-content {
+  padding: 40px;
+}
+.dashboard-content .welcome-section {
+  margin-bottom: 40px;
+}
+.dashboard-content .welcome-section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+.dashboard-content .stats-grid {
+  display: none;
+}
+.dashboard-content .charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1024px) {
+  .dashboard-content .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dashboard-content .charts-grid .chart-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dashboard-content .charts-grid .chart-card:first-child {
+  background-color: #2c3e50;
+}
+.dashboard-content .charts-grid .chart-card:first-child .chart-header h3 {
+  color: #ffffff;
+}
+.dashboard-content .charts-grid .chart-card .chart-header {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.dashboard-content .charts-grid .chart-card .chart-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.dashboard-content .charts-grid .chart-card .chart-container {
+  position: relative;
+  padding: 20px;
+}
+.dashboard-content .charts-grid .chart-card .chart-container-donut {
+  position: relative;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar .sidebar-nav ul li a span {
+    display: none;
+  }
+  .main-content {
+    margin-left: 60px;
+  }
+  .dashboard-content {
+    padding: 20px;
+  }
+  .dashboard-content .welcome-section h1 {
+    font-size: 24px;
+  }
+  .dashboard-content .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
