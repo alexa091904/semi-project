@@ -14,7 +14,9 @@ class RemoveGradeLevelFromStudentsTable extends Migration
     public function up()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->dropColumn('grade_level');
+            if (Schema::hasColumn('students', 'grade_level')) {
+                $table->dropColumn('grade_level');
+            }
         });
     }
 
@@ -26,7 +28,9 @@ class RemoveGradeLevelFromStudentsTable extends Migration
     public function down()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->string('grade_level')->after('status');
+            if (!Schema::hasColumn('students', 'grade_level')) {
+                $table->string('grade_level')->after('status');
+            }
         });
     }
 }
